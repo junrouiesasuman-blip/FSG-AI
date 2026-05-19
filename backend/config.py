@@ -3,6 +3,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+BASE_DIR = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+
 
 class Config:
     SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret-key")
@@ -11,7 +13,7 @@ class Config:
 
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    MODEL_PATH = os.getenv(
-        "MODEL_PATH",
-        "best_model_random_forest.pkl"
+    MODEL_PATH = os.path.join(
+        BASE_DIR,
+        os.getenv("MODEL_PATH", "best_model_random_forest.pkl")
     )
