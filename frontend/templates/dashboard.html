@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Analyze | AI Risk Intelligence{% endblock %}
+{% block content %}
+<section class="section page-head reveal"><div><div class="eyebrow">Authenticated model access</div><h1>AI Analysis Dashboard</h1><p>Enter feature values and run the trained model through the Flask REST API.</p></div><a class="btn ghost" href="/history">View history</a></section>
+<section class="dashboard-grid section">
+  <form id="analysisForm" class="panel glass reveal">
+    <h2>Model Inputs</h2><div class="form-grid">
+    {% for feature in features %}<label>{{ feature }}<small>{{ feature_meta.get(feature, 'Model feature') }}</small><input type="number" step="any" name="{{ feature }}" required placeholder="0.00"></label>{% endfor %}
+    </div><button class="btn full" type="submit">Run AI Analysis</button>
+  </form>
+  <aside class="panel result-panel glass reveal delay-1"><h2>Prediction Output</h2><div class="prediction-ring"><span id="predictionText">Ready</span></div><p id="confidenceText" class="muted">Submit values to generate a prediction.</p><div id="probabilities" class="probabilities"></div></aside>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>{% endblock %}

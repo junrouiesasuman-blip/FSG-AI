@@ -1,0 +1,6 @@
+{% extends "base.html" %}
+{% block title %}History | AI Risk Intelligence{% endblock %}
+{% block content %}
+<section class="section page-head reveal"><div><div class="eyebrow">Recent analysis</div><h1>History</h1><p>Navigate your latest saved model predictions.</p></div><a class="btn" href="/dashboard">New analysis</a></section><section class="section"><div id="historyList" class="history-list"></div></section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='js/history.js') }}"></script>{% endblock %}
