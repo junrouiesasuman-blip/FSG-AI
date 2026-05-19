@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{% block title %}FSG AI{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body>
+  <div class="ambient one"></div><div class="ambient two"></div><div class="grid-overlay"></div>
+  <nav class="nav glass">
+    <a href="/" class="brand"><span class="brand-orb"></span>AI Risk Intelligence</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <div class="nav-links">
+      <a href="/">Home</a><a href="/dashboard">Analyze</a><a href="/history">History</a>
+      <a href="/login" data-guest>Login</a><a class="btn btn-small" href="/signup" data-guest>Sign up</a>
+      <button class="btn btn-small ghost hidden" data-auth id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+  <main>{% block content %}{% endblock %}</main>
+  <div id="snackbar" class="snackbar"></div>
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

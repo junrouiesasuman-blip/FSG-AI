@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Flask
+instance/
+.webassets-cache
+
+# Environment Variables
+.env
+
+# Database
+*.db
+*.sqlite3
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Mac
+.DS_Store
+
+# Logs
+*.log
+
+# Build
+dist/
+build/
+
+# Cache
+.pytest_cache/
+.mypy_cache/
+
+# Uploaded files
+uploads/
+
+# Render
+.render/

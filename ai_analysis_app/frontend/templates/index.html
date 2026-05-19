@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+{% block title %}FSG AI{% endblock %}
+
+{% block content %}
+
+<section class="section hero">
+    <div class="reveal">
+        <span class="eyebrow">AI-Powered Analysis System</span>
+
+        <h1>FSG AI</h1>
+
+        <p>
+            FSG AI is an intelligent analysis system that evaluates submitted data
+            using a trained machine learning model to classify results as Normal,
+            High Risk, or Anomaly. The system helps identify unusual patterns,
+            detect potential risks, and provide organized prediction records for review.
+        </p>
+
+        <div class="hero-actions">
+            <a href="{{ url_for('main.signup_page') }}" class="btn">
+                Get Started
+            </a>
+
+            <a href="{{ url_for('main.login_page') }}" class="btn ghost">
+                Login
+            </a>
+        </div>
+    </div>
+
+    <div class="glass model-card reveal delay-1">
+        <div class="neural-core">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="metric">
+            <b>AI Status</b>
+            <span>ACTIVE</span>
+        </div>
+
+        <div class="bar">
+            <i style="width:92%"></i>
+        </div>
+
+        <div class="chips">
+            <b>Normal</b>
+            <b>High Risk</b>
+            <b>Anomaly</b>
+        </div>
+
+        <p style="margin-top:1rem">
+            Monitoring prediction patterns and analysis records.
+        </p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="page-head">
+        <div>
+            <span class="eyebrow">About the System</span>
+
+            <h2>What FSG AI Does</h2>
+
+            <p>
+                FSG AI processes user-submitted information and generates intelligent
+                predictions through a trained Random Forest model.
+            </p>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div class="glass card reveal">
+            <h3>Risk Assessment</h3>
+
+            <p>
+                Evaluates input data and determines whether the condition is
+                Normal, High Risk, or Anomaly.
+            </p>
+        </div>
+
+        <div class="glass card reveal delay-1">
+            <h3>Anomaly Detection</h3>
+
+            <p>
+                Identifies unusual patterns or abnormal values that may require
+                further attention and monitoring.
+            </p>
+        </div>
+
+        <div class="glass card reveal delay-2">
+            <h3>Prediction History</h3>
+
+            <p>
+                Stores previous analysis results so users can review and track
+                recent predictions anytime.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="page-head">
+        <div>
+            <span class="eyebrow">System Workflow</span>
+
+            <h2>How the System Works</h2>
+
+            <p>
+                The system follows a structured process from secure user access
+                to AI-powered prediction and result storage.
+            </p>
+        </div>
+    </div>
+
+    <div class="cards">
+
+        <div class="glass card reveal">
+            <h3>User Authentication</h3>
+
+            <p>
+                Users securely create an account or log in before using the system.
+            </p>
+        </div>
+
+        <div class="glass card reveal delay-1">
+            <h3>Data Submission</h3>
+
+            <p>
+                The user enters the required analysis values into the prediction form.
+            </p>
+        </div>
+
+        <div class="glass card reveal delay-2">
+            <h3>AI Processing</h3>
+
+            <p>
+                The trained Random Forest model processes the submitted data.
+            </p>
+        </div>
+
+        <div class="glass card reveal">
+            <h3>Prediction Result</h3>
+
+            <p>
+                The system classifies the result as Normal, High Risk, or Anomaly.
+            </p>
+        </div>
+
+        <div class="glass card reveal delay-1">
+            <h3>Result Review</h3>
+
+            <p>
+                Users can immediately view the prediction result and confidence level.
+            </p>
+        </div>
+
+        <div class="glass card reveal delay-2">
+            <h3>History Tracking</h3>
+
+            <p>
+                All previous analyses are stored and accessible through the history page.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
